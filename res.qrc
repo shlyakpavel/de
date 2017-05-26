@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>properties.png</file>
+        <file>up-arrow.png</file>
+        <file>branch-closed.png</file>
+        <file>branch-open.png</file>
+        <file>down-arrow.png</file>
+        <file>domik.gif</file>
+        <file>star-favorite.png</file>
+        <file>power-reset-3-color.png</file>
+        <file>back.png</file>
+    </qresource>
+    <qresource prefix="/html">
+        <file alias="calculator.html">html/calculator.html</file>
+    </qresource>
+</RCC>

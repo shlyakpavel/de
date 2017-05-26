@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>reboot.png</file>
+        <file>turn_off.png</file>
+    </qresource>
+</RCC>

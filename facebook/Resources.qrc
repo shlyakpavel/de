@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/toolbar/back.png</file>
+        <file>res/toolbar/forward.png</file>
+        <file>res/toolbar/settings.png</file>
+        <file>res/logo/Facebook.png</file>
+        <file>res/toolbar/close.png</file>
+        <file>res/logo/Facebook-icon.png</file>
+        <file>res/logo/Facebook-icon-red.png</file>
+        <file>res/toolbar/about.png</file>
+        <file>res/logo/facebook-256x256.png</file>
+    </qresource>
+</RCC>

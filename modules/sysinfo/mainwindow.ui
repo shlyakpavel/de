@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>686</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Информация о системе</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Blue ocean */
+QMainWindow, QDialog {background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(0, 31, 160), stop:0.630682 rgb(64, 126, 255), stop:0.98 rgb(147, 187, 255), stop:1 rgb(0, 0, 0)); }
+QMenuBar {color: white; background: transparent; }
+QMenu { color: white; background: #00008C; }
+QMenuBar::item { background: transparent; }
+QMenu::item:selected { color: #BBBB44; background-color: #0000BB;}
+QMenu::item { color: white; background-color: #00008C; }
+QDialog *{color: white;}
+QPushButton, QToolButton { color: white; background-color: rgba(0,0,140,255); }
+QPushButton:hover, QToolButton:hover { color: white; background-color: rgba(40,40,180,255); }
+QWidget:disabled {color: #6666EE; background: transparent;}
+QTableView { color: white; background: transparent; selection-background-color: #3399FF;}
+QHeaderView::section { color: white; background-color: rgb(0,0,140); }
+QTableView QTableCornerButton::section { background: #3399FF; border: 2px outset #33DDFF; }
+QWidget#widget_Center *{ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 31, 160, 255), stop:0.630682 rgba(64, 126, 255, 255), stop:0.98 rgba(147, 187, 255, 255), stop:1 rgba(0, 0, 0, 0));}
+QWidget#widget_Center *{font: bold 14pt &quot;Arial&quot;; }
+RightClickableButton:flat {color: red; text-decoration: overline; }
+RightClickableButton:hover:!flat {color: rgba(255,200,60,255); }
+QGroupBox, QLabel { color: rgba(205,205,255,255); background: transparent;}
+QLineEdit , QComboBox , QComboBox *{ color: rgba(205,205,255,255); background-color: #2828B4;}
+QRadioButton , QCheckBox { color: white; }
+/*QRadioButton[djulaColor1=&quot;true&quot;] { color: yellow; } */
+QWidget#widget_RightStat * {color: rgb(0,0,140); }
+QLabel#label_Correct {color: rgb(26,164,0); font-style: bold;}
+QLabel#label_False {color: rgb(220,0,22); font-style: bold;}
+QLabel#label_UsedHelp {color: rgb(255,170,0); font-style: bold;}
+QLabel#label_SentencesNr {font-style: bold; }
+QLabel#label_Done {font-style: bold; }
+QLabel#label_Playmode {font-style: bold; }
+QLabel#label_Performance {font-style: bold; }
+QLabel#label_ThemeName {font-style: bold; font-size: 16pt; text-decoration: underline; color: white; }
+QLabel#label_HunSentence {font-style: bold; font-size: 16pt; color: rgb(0,0,140); background-color: rgba(255,255,255,100); }
+QLabel#label_EnglishSentence {font-style: bold; font-size: 16pt; color: rgb(60,0,100); background-color: rgba(255,255,255,100); }
+QStatusBar { color: white; }
+QTabWidget { background-color: rgba(0,0,60,160); }
+QTabWidget::pane { /* The tab widget frame */
+     border-top: 2px solid #02BBCB;
+ }
+QTabWidget::tab-bar {
+     left: 5px; /* move to the right by 5px */
+ }
+QTabBar::tab {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #212181, stop: 0.4 #8888DD,
+                                 stop: 0.5 #4848a8, stop: 1.0 #6363D3);
+     border: 2px solid #C4C4C3;
+     border-bottom-color: #02777B; /* same as the pane color */
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     min-width: 8ex;
+     padding: 2px;
+ }
+
+ QTabBar::tab:selected, QTabBar::tab:hover {
+     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #000044, stop: 0.4 #141464,
+                                 stop: 0.5 #006666, stop: 1.0 #003333);
+ }
+
+ QTabBar::tab:selected {
+     border-color: #9B9B9B;
+     border-bottom-color: #C2BBCB; /* same as pane color */
+ }
+
+ QTabBar::tab:!selected {
+     margin-top: 2px; /* make non-selected tabs look smaller */
+ }
+
+QDialog#TranslateWindow QLabel#hunTextLabel { color: white; }
+
+QProgressBar {
+     border: 2px solid #0578AA;
+     border-radius: 5px;
+	 text-align: center;
+	 background: transparent;
+ }
+
+ QProgressBar::chunk {
+     background-color: #0578AA;
+     /*width: 20px;*/
+ }
+ </string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="0">
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::TextSelectableByMouse</set>
+      </property>
+      <property name="source">
+       <url>
+        <string/>
+       </url>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>60</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="rightMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>сохранить как</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>обновить</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>cpuinfo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>mounts</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PID</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>meminfo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>partitions</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>consoles</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>modules</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">padding: 3px 0px 3px 0px;</string>
+         </property>
+         <property name="text">
+          <string>x</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
